@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <style>
+        .wrap{
+            width:900px;
+            margin:0 auto;
+            position: relative;
+        }
+        #left{
+            width:700px;
+            height:500px;
+            background: #ffff;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        #right{
+            width:200px;
+            height:500px;
+            background: #ffcccc;
+            position: absolute;
+            top:0;
+            right:0;
+
+        }
+
+        table{
+                width: 700px;
+                height: 500px;
+                border: 3px black solid;
+                margin: 0px auto;
+                /*padding: 20px;*/
+                border-collapse: collapse;/*合并边框属性 ，使边框之间没有间距*/
+
+            }
+            td,th{
+                border: 1px black solid;
+                padding: 0px 22px;
+                /*padding: 20px;*/
+                /*margin: 20px;*/
+            }
+            .td1{
+                background: #A9A9A9;
+                font-weight: bold;
+            }
+            th{
+                background: brown;
+                font-size:20px;
+                color: aliceblue;
+            }
+        </style>
+    </style>
+
+
+    <body>
+        <div class="wrap">
+            <aside id="left">
+                <table><!--table是块状元素的-->
+                    <tr><!--使用th会使12345加粗并居中-->
+                        <th colspan="6">课程表</th>
+
+                    </tr>
+                    <tr>
+                        <td class="td1"></td>
+                        <td class="td1">周一</td>
+                        <td class="td1">周二</td>
+                        <td class="td1">周三</td>
+                        <td class="td1">周四</td>
+                        <td class="td1">周五</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" class="td1">1-2</td>
+                        <td id="t1">Windows程序设计</td>
+                        <td><td id="t2">编译原理</td></td>
+                        <td></td>
+                        <td id="t3">人工智能</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" class="td1">3-4</td>
+                        <td id="t4">信息检索</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" class="td1">5-6</td>
+                        <td id="t5">操作系统</td>
+                        <td></td>
+                        <td></td>
+                        <td id="t6">web程序设计</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" class="td1">7-8</td>
+                        <td></td>
+                        <td id="t7">微机原理与接口技术</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </aside>
+            <section id="right">
+                <div id="right_text1">window程序设计 N113</div>
+                <div id="right_text2">编译原理 N108</div>
+                <div id="right_text3">人工智能 N113</div>
+                <div id="right_text4">信息检索 N108</div>
+                <div id="right_text5">操作系统 N217</div>
+                <div id="right_text6">web程序设计 N108</div>
+                <div id="right_text7">微机原理与接口技术 N211</div>
+
+            </section>
+        </div>
+        <script>
+        (function(){
+    var btn = document.getElementById('t1');
+    var box = document.getElementById('right_text1');
+    btn.onmouseover = function(){
+    box.style.display = 'block';
+    }
+    btn.onmouseout = function(){
+    box.style.display = 'none';
+    }
+
+    var btn2 = document.getElementById('t2');
+    var box2 = document.getElementById('right_text2');
+    btn2.onmouseover = function(){
+    box2.style.display = 'block';
+    }
+    btn2.onmouseout = function(){
+    box2.style.display = 'none';
+    }
+
+    var btn3 = document.getElementById('t3');
+    var box3 = document.getElementById('right_text3');
+    btn3.onmouseover = function(){
+    box3.style.display = 'block';
+    }
+    btn3.onmouseout = function(){
+    box3.style.display = 'none';
+    }
+
+    var btn4 = document.getElementById('t4');
+    var box4 = document.getElementById('right_text4');
+    btn4.onmouseover = function(){
+    box4.style.display = 'block';
+    }
+    btn4.onmouseout = function(){
+    box4.style.display = 'none';
+    }
+
+    var btn5 = document.getElementById('t5');
+    var box5 = document.getElementById('right_text5');
+    btn5.onmouseover = function(){
+    box5.style.display = 'block';
+    }
+    btn5.onmouseout = function(){
+    box5.style.display = 'none';
+    }
+
+    var btn6 = document.getElementById('t6');
+    var box6 = document.getElementById('right_text6');
+    btn6.onmouseover = function(){
+    box2.style.display = 'block';
+    }
+    btn6.onmouseout = function(){
+    box6.style.display = 'none';
+    }
+
+    var btn7 = document.getElementById('t7');
+    var box7 = document.getElementById('right_text7');
+    btn7.onmouseover = function(){
+    box7.style.display = 'block';
+    }
+    btn7.onmouseout = function(){
+    box7.style.display = 'none';
+    }
+
+    })();
+        </script>
+    </body>
+</html>
