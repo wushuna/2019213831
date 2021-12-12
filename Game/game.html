@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的游戏</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: darkcyan;
+        }
+
+        h3 {
+            text-indent: 10px;
+            font-size: 50px;
+            color: palegoldenrod;
+            letter-spacing: 5px;
+            margin-top: 100px;
+            margin-left: 0cm;
+        }
+
+        h4 {
+            text-indent: 10px;
+            font-size: 20px;
+            color: palegoldenrod;
+            letter-spacing: 5px;
+            margin-top: 300px;
+            margin-left: 0cm;
+        }
+
+        .main {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px;
+        }
+
+        .main:hover {
+            cursor: url("img/chuizi.ico"), auto;
+        }
+
+        .item {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .item img {
+            width: 97%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .item .mouse {
+            width: 50%;
+        }
+
+        .item .hole {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>积分：<span class="score">0</span></h3>
+    <h4>剩余时间：<span class="time">0</span></h4>
+    <form>
+        <div class="main">
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+            <div class="item">
+                <img class="hole" src="img/hole2.png" alt="">
+                <img class="mouse" src="img/mouse.png" alt="">
+                <img class="boom" src="img/boom.png" alt="">
+            </div>
+        </div>
+        <input type="button" onclick="start()" value="开始" />
+    </form>
+</body>
+
+</html>
+<script>
+    var mouseLists = document.querySelectorAll(".mouse");
+    var scoreBox = document.querySelector(".score");
+    var timeBox = document.querySelector(".time");
+    var score = 0;
+    var time = 10;  //初始时间为10
+    var overSub;
+    var overRandom;
+    var overClear;
+
+    for (var i = 0; i < mouseLists.length; i++) {
+        //给每个老鼠绑定点击事件
+        //让老鼠消失
+        //让boom出现
+        //让积分改变
+        mouseLists[i].onclick = function () {
+            this.style.display = "none";
+            this.parentElement.lastElementChild.style.display = "block";
+            var _that = this;
+            score += 100;
+            //260ms后让boom消失
+            var timer = setTimeout(function () {
+                clearTimeout(timer);
+                timer = null;
+                _that.parentElement.lastElementChild.style.display = "none";
+            }, 260);
+            scoreBox.innerHTML = score;
+        }
+    }
+
+    //开始出现随机地鼠
+    function start_game() {
+        setInterval(function () {
+            var i = Math.floor(Math.random() * 9);
+            mouseLists[i].style.display = "block";
+        }, 500);
+
+        setInterval(function () {
+            var i = Math.floor(Math.random() * 9);
+            mouseLists[i].style.display = "none";
+        }, 200);
+    }
+
+    //清空地鼠
+    function clear() {
+        for (var i = 0; i < mouseLists.length; i++) {
+            mouseLists[i].style.display = "none";
+        }
+    }
+
+    //时间减少
+    function timeSub() {
+        time--;
+        timeBox.innerHTML = time;
+        if (time <= 0) {
+            window.clearInterval(overRandom);
+            window.clearInterval(overClear);
+            window.clearInterval(overSub);
+            clear();
+            alert("游戏结束，分数为:" + score);
+        }
+    }
+
+    //点击开始触发
+    function start() {
+        time = 10;
+        start_game();
+        overSub = window.setInterval("timeSub()", 1000);
+    }
+
+</script>
