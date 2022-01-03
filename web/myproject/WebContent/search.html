@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>聚友趣</title>
+  <!--搜索界面-->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Dmitry Volkov">
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+  <style>
+		body {
+           font-family: Arial;
+           margin: 0;
+           background-image: url("./images/9.jpg");
+           background-repeat: no-repeat;
+           background-size: 100% 250%;
+            }
+
+            .sidebox__share{
+		background-color:rgba(255,255,255,0.5);
+}
+
+
+	</style>
+</head>
+<body>
+<!-- header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-7 col-md-9 col-lg-8 col-xl-9">
+        <div class="header__content">
+          <!-- header menu btn -->
+          <button class="header__btn" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <!-- end header menu btn -->
+
+          <!-- header logo -->
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="">
+          </a>
+          <!-- end header logo -->
+
+          <!-- header nav -->    <!--分类-->
+          <ul class="header__nav">
+            <!-- dropdown -->
+            <li class="header__nav-item">
+              <a href="index.html" class="header__nav-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">首页</font></font></a>
+            </li>
+            <!-- end dropdown -->
+
+            <!-- dropdown -->
+            <li class="header__nav-item">
+              <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuProjects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">娱乐</font></font></a>
+
+              <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuProjects">
+                <li><a href="projects.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">游戏</font></font></a></li>
+                <li><a href="project.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">音乐</font></font></a></li>
+                <li><a href="add-project.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">摄影</font></font></a></li>
+              </ul>
+            </li>
+            <!-- end dropdown -->
+
+            <!-- dropdown -->
+            <li class="header__nav-item">
+              <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuJobs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生活</font></font></a>
+
+              <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuJobs">
+                <li><a href="jobs.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">美食</font></font></a></li>
+                <li><a href="job.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动</font></font></a></li>
+                <li><a href="add-job.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">旅游</font></font></a></li>
+              </ul>
+            </li>
+            <!-- end dropdown -->
+
+            <!-- dropdown -->
+            <li class="header__nav-item">
+              <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuProfiles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人资料</font></font></a>
+
+              <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuProfiles">
+                <li><a href="profiles.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">好友</font></font></a></li>
+                <li><a href="profile.jsp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人界面</font></font></a></li>
+              </ul>
+            </li>
+            <!-- end dropdown -->
+
+          </ul>
+          <!-- end header nav -->
+
+          <!-- header search -->
+          <form action="#" class="header__search">
+            <input class="header__search-input" type="text" placeholder="搜索...">
+            <button class="header__search-button" type="button">
+              <i class="icon ion-ios-search"></i>
+            </button>
+          </form>
+          <!-- end header search -->
+        </div>
+      </div>
+
+      <div class="col-5 col-md-3 col-lg-4 col-xl-3">
+        <div class="header__content header__content--end">
+
+
+          <div class="header__notifications">
+
+
+            <div class="dropdown-menu dropdown-menu-right header__dropdown-menu header__dropdown-menu--right header__dropdown-menu--ntf" aria-labelledby="dropdownMenuNotifications">
+
+
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>           <!--导航条-->
+<!-- end header -->
+
+
+<!-- main content -->
+<main class="main main--breadcrumb">
+  <!-- breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="breadcrumb__wrap">
+            <li class="breadcrumb__item"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">首页</font></font></a></li>
+            <li class="breadcrumb__item breadcrumb__item--active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索界面</font></font></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>       <!--2导航条-->
+  <!-- end breadcrumb -->
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <!-- 左边 -->
+        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+          <!-- user -->
+          <div class="user">
+            <div class="user__head">
+              <div class="user__img">
+<img src="./images/9.jpg" alt="">
+              </div>
+            </div>
+            <div class="user__title">
+
+
+              <div class="profile__actions">
+                <div class="post__location">
+                  <!--	<i class="icon ion-ios-navigate"></i>
+                      <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">越南</font></font></span>-->
+                </div>
+
+                <div class="post__actions">
+
+                		</div>
+              </div>
+            </div>
+
+          </div>				<!--默认头像-->
+          <!-- end user -->
+
+          <!-- social -->
+          <div class="sidebox">
+            <div class="sidebox__share">
+
+
+            </div>
+          </div>            <!--用户邮箱-->
+          <!-- end social -->
+        </div>
+
+
+        <!--中间-->
+        <div class="col-12 col-md-7 col-lg-8 col-xl-6">
+
+          <!--中间的三个分块-->
+          <div class="tab-content">
+
+            <!--动态-->
+            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+              <!-- post -->
+              <div class="post">
+                <div class="post__head">
+                  <a href="#" class="post__head-img">
+                    <!--1头像-->										<img src="./juyouqu/WebContent/images/9.jpg" alt="">
+                  </a>
+                  <!--1人名-->						<div class="post__head-title">
+                  <h5><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安迪·拉莫斯（Andy Ramos）</font></font></a></h5>
+
+                </div>
+
+                  <div class="post__dropdown">
+                    <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="icon ion-md-more"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu3">
+                      <li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></a></li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <div class="post__wrap">
+                  <div class="post__company">
+
+                  </div>
+
+                  <div class="post__actions">
+
+
+                  </div>
+                </div>
+                <!--1标题-->					<h2 class="post__title">
+
+              </h2>
+
+                <div class="post__options">
+
+                </div>
+
+                <div class="post__description">
+                  <!--1.内容-->
+                  <!--动态更新-->						<div class="new12">
+
+                </div>
+
+                </div>
+                <!-- 标签 -->
+                <!--
+                <div class="post__tags">
+                    <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTML </font></font></a>
+                    <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSS </font></font></a>
+                    <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JS </font></font></a>
+                    <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PSD</font></font></a>
+                </div>
+                -->
+
+                <div class="post__stats">
+                  <!--1点赞-->							<div>
+                  <a class="post__likes" href="#"><i class="icon ion-ios-heart"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></span></a>
+                  <a class="post__comments" data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse1"><i class="icon ion-ios-text"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span></a>
+                </div>
+
+                  <div class="post__views">
+                    <i class="icon ion-ios-eye"></i>
+                    <span>
+											<font style="vertical-align: inherit;">
+												<font style="vertical-align: inherit;">214</font>
+											</font>
+										</span>
+                  </div>
+                </div>
+
+                <!--1评论-->							<div class="collapse post__collapse" id="collapse3">
+                <form action="#" class="post__form">
+                  <input type="text" placeholder="Type your comment...">
+                  <button type="button"><i class="icon ion-ios-paper-plane"></i></button>
+                </form>
+              </div>
+              </div>
+              <!-- end post -->
+
+              <!-- post -->
+              <div class="post">
+                <div class="post__head">
+                  <!--动态2头像-->						<a href="#" class="post__head-img">
+                  <img src="./images/9.jpg" alt="">
+                </a>
+                  <div class="post__head-title">
+                    <!--人名-->							<h5><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">索菲亚·门多萨（Sophia Mendoza）</font></font></a></h5>
+
+                  </div>
+
+                  <div class="post__dropdown">
+                    <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="icon ion-md-more"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu3">
+                      <li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="post__wrap">
+                  <div class="post__company">
+
+                  </div>
+
+                  <div class="post__actions">
+
+                  </div>
+                </div>
+ <!--2标题-->		<h2 class="post__title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PSD转换为HTML</font></font></h2>
+
+                <div class="post__options">
+
+                </div>
+
+                <div class="post__description">
+ <!--2内容-->							<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem Ipsum的段落有很多变体，但是大多数都因注入幽默感或看起来有些难以置信的随机单词而以某种形式发生了变化。</font><font style="vertical-align: inherit;">如果要使用Lorem Ipsum的段落，则需要确保文本中间没有隐藏任何令人尴尬的内容。</font></font></p>
+
+                </div>
+ <!-- 2标签 -->
+
+                <div class="post__stats">
+                  <div>
+                    <a class="post__likes" href="#"><i class="icon ion-ios-heart"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></span></a>
+                    <a class="post__comments" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse1"><i class="icon ion-ios-text"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span></a>
+                  </div>
+
+<!--2浏览-->								<div class="post__views">
+                  <i class="icon ion-ios-eye"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">214</font></font></span>
+                </div>
+                </div>
+
+<!--2评论-->					<div class="collapse post__collapse" id="collapse2">
+                <form action="#" class="post__form">
+                  <input type="text" placeholder="Type your comment...">
+                  <button type="button"><i class="icon ion-ios-paper-plane"></i></button>
+                </form>
+              </div>
+              </div>
+              <!-- end post -->
+              <!-- post -->
+              <div class="post">
+                <div class="post__head">
+                  <a href="#" class="post__head-img">
+ <!--3头像-->						<img src="./juyouqu/WebContent/images/9.jpg" alt="">
+                  </a>
+                  <div class="post__head-title">
+<!--3人名-->						<h5><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">圣地亚哥·罗宾逊</font></font></a></h5>
+
+                  </div>
+
+                  <div class="post__dropdown">
+                    <a class="dropdown-toggle post__dropdown-btn" href="#" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="icon ion-md-more"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right post__dropdown-menu" aria-labelledby="dropdownMenu3">
+                      <li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">删除</font></font></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="post__wrap">
+                  <div class="post__company">
+
+                  </div>
+
+                  <div class="post__actions">
+
+                  </div>
+                </div>
+
+<!--3标题-->				<h2 class="post__title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PSD转换为HTML</font></font></h2>
+
+                <div class="post__options">
+
+                </div>
+
+                <div class="post__description">
+<!--3内容-->				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem Ipsum的段落有很多变体，但是大多数都因注入幽默感或看起来有些难以置信的随机单词而以某种形式发生了变化。</font><font style="vertical-align: inherit;">如果要使用Lorem Ipsum的段落，则需要确保文本中间没有隐藏任何令人尴尬的内容。</font></font></p>
+
+                </div>
+
+                <div class="post__stats">
+                  <div>
+ <!--3点赞-->		<a class="post__likes" href="#"><i class="icon ion-ios-heart"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></span></a>
+                    <a class="post__comments" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1"><i class="icon ion-ios-text"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span></a>
+                  </div>
+
+                  <div class="post__views">
+                    <i class="icon ion-ios-eye"></i> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">214</font></font></span>
+                  </div>
+                </div>
+
+                <!--3内容-->								<div class="collapse post__collapse" id="collapse1">
+                <form action="#" class="post__form">
+                  <input type="text" placeholder="Type your comment...">
+                  <button type="button"><i class="icon ion-ios-paper-plane"></i></button>
+                </form>
+              </div>
+              </div>
+              <!-- end post -->
+
+              <!-- view more -->
+              <button class="main__btn" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">装载更多</font></font></span></button>
+              <!-- end view more -->
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- end main content -->
+
+<!-- JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/wNumb.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
+<script src="js/main.js"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+  <div style="padding: 8px;"><div><div class="logo"></div></div></div>
+  <div class="bottom" style="padding: 8px;"><div class="started-activity-container"></div></div></div>
+
+</body>
+</html>
